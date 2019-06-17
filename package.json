@@ -1,0 +1,31 @@
+{
+	"name": "memory",
+	"version": "1.0.0",
+	"description": "A memory game",
+	"private": true,
+	"scripts": {
+		"tsc": "rm -rf ./src && tsc",
+		"build": "npm run tsc --pretty && npx webpack",
+		"lint": "tslint -c tslint.json './ts/*' --fix",
+		"start": "open index.html",
+		"test": "npm run lint && npm run tsc && jasmine"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cameron-earl/memory.git"
+	},
+	"author": "Cameron Earl",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/cameron-earl/memory/issues"
+	},
+	"homepage": "https://github.com/cameron-earl/memory#readme",
+	"devDependencies": {
+		"@types/jasmine": "^3.3.13",
+		"jasmine": "^3.4.0",
+		"tslint": "^5.17.0",
+		"typescript": "^3.5.2",
+		"webpack": "^4.34.0",
+		"webpack-cli": "^3.3.4"
+	}
+}
